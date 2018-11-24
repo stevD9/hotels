@@ -8,11 +8,21 @@ html {
   font-size: 16px;
 }
 
+body, p, h1 {
+  margin: 0;
+}
+
 .container {
   display: flex;
 }
 
 /* Header */
+
+header {
+  padding: 1em;
+  background-color: lightblue;
+  color: grey;
+}
 
 .search-button {
 
@@ -47,6 +57,11 @@ html {
 
 /* Main */
 
+main {
+  padding: 1em;
+  background-color: lightgrey;
+}
+
 /* Sort and map */
 
 #map-sort, .sort {
@@ -55,8 +70,77 @@ html {
 
 #map-sort {
   justify-content: space-between;
+  margin-bottom: 1em;
 }
 
+/* Hotels */
+
+.hotel {
+  height: 210px;
+  margin-bottom: .5em;
+  background-color: white;
+}
+
+.hotel-info, .deals, .selection {
+  margin: .5em 0;
+  padding: 0 .5em;
+}
+
+.deals {
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.hotel-info {
+  border-right: 1px lightgrey solid;
+}
+
+.deals ul {
+  padding: 0;
+  list-style-type: none;
+  text-align: center;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+  padding-bottom: .5em;
+  border-bottom: 1px lightgrey solid;
+}
+
+.more-deals {
+  flex-direction: column;
+  margin-top: .5em;
+  text-align: center;
+}
+
+.selection {
+  flex-direction: column;
+  border-left: 1px lightgrey solid;
+}
+
+.selection-info {
+  text-align: center;
+  height: 100%;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.view-deal-btn {
+  width: 100%;
+}
+
+.deals {
+  flex: 1 1;
+}
+
+.selection, .img-container {
+  flex: 2 1;
+}
+
+.hotel-info {
+  flex: 3 1;
+}
 
 
 /* .deals-list li {
