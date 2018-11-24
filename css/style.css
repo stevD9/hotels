@@ -1,0 +1,64 @@
+/* Universal */
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 16px;
+}
+
+.container {
+  display: flex;
+}
+
+/* Header */
+
+.search-button {
+
+}
+
+.check-in, .check-out, .price, .property, .rating,
+.location, .more  {
+  flex-direction: column;
+}
+
+#search-filter, .check-in, .check-out, #room-type-filter,
+.property, .rating, .location, .more {
+  flex: 1 1;
+}
+
+.price {
+  flex: 2 1;
+}
+
+#room-type-filter {
+  border: 1px #000 solid;
+}
+
+#price-filter {
+  width: 100%;
+  margin: 0;
+}
+
+.max-price {
+  justify-content: space-between;
+}
+
+/* Main */
+
+/* Sort and map */
+
+#map-sort, .sort {
+  align-items: center;
+}
+
+#map-sort {
+  justify-content: space-between;
+}
+
+
+
+/* .deals-list li {
+  text-align: center;
+} */

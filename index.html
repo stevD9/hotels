@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+  <head>
+    <meta charset="utf-8">
+    <title>Hotels</title>
+    <link rel="stylesheet" type="text/css" href="./css/style.css">
+  </head>
+  <body>
+
+<!-- Header -->
+
+    <header>
+
+<!-- Search form -->
+
+      <form id="search-options" action="index.html" method="post">
+        <section id="search" class="container">
+            <input id="search-filter" type="search" name="search" placeholder="Enter your destination!">
+            <input type="submit" value="Search" class="search-btn">
+        </section>
+        <section id="filters-1" class="container">
+          <div class="check-in container">
+            <label for="check-in">Check-in</label>
+            <input id="check-in" type="date" name="check-in" value="2018-11-26">
+          </div>
+          <div class="check-out container">
+            <label for="check-out">Check-out</label>
+            <input id="check-out" type="date" name="check-out" value="2018-11-27">
+          </div>
+            <select id="room-type-filter" name="room-type">
+              <option value="family" selected>Family rooms</option>
+              <option value="single">Single rooms</option>
+              <option value="double">Double rooms</option>
+            </select>
+        </section>
+
+        <section id="filters-2" class="container">
+          <div class="price container">
+            <div class="max-price container">
+              <label for="price-filter">Price</label>
+              <label for="price-filter">Max $6,090</label>
+            </div>
+            <input id="price-filter" type="range" name="price" min="10" max="6090">
+          </div>
+          <div class="property container">
+            <label for="property-type-filter">Property type</label>
+            <select id="property-type-filter" name="property-type">
+              <option value="all" selected>All</option>
+              <option value="0">0 Stars</option>
+              <option value="1">1 Star</option>
+              <option value="2">2 Stars</option>
+              <option value="3">3 Stars</option>
+              <option value="4">4 Stars</option>
+              <option value="5">5 Stars</option>
+            </select>
+          </div>
+          <div class="rating container">
+            <label for="rating-filter">Guest rating</label>
+            <select id="rating-filter" name="rating">
+              <option value="all" selected>All</option>
+              <option value="okay">0-2 Okay</option>
+              <option value="fair">2-6 Fair</option>
+              <option value="good">6-7 Good</option>
+              <option value="very good">7-8.5 Very Good</option>
+              <option value="excellent">8.5-10 Excellent</option>
+            </select>
+          </div>
+          <div class="location container">
+            <label for="location-filter">Hotel location</label>
+            <select id="location-filter" name="location">
+              <option value="1" selected>Location 1</option>
+              <option value="2">Location 2</option>
+              <option value="3">Location 3</option>
+              <option value="4">Location 4</option>
+              <option value="5">Location 5</option>
+            </select>
+          </div>
+          <div class="more container">
+            <label for="more-filter">More filters</label>
+            <select id="more-filter" name="more">
+              <option value="" selected>Select</option>
+              <option value="breakfast">Breakfast</option>
+              <option value="pets">Pets</option>
+              <option value="wifi">WiFi</option>
+            </select>
+          </div>
+        </section>
+      </form>
+    </header>
+
+<!-- Main -->
+
+    <main>
+
+<!-- Sort and map section -->
+
+      <section id="map-sort" class="container">
+        <div class="map">
+          <button type="button" name="view-map" class="view-map-btn">View Map</button>
+        </div>
+        <div class="sort container">
+          <label for="sort-by">Sort by</label>
+          <select id="sort-by" name="sort-by">
+            <option value="ours">Our recommendations</option>
+            <option value="price">Price</option>
+            <option value="type">Property type</option>
+            <option value="rating">Guest rating</option>
+            <option value="location">Hotel location</option>
+          </select>
+        </div>
+      </section>
+
+<!-- Hotels sections -->
+
+      <section>
+        <div class="img-container">
+          <p>1/30</p>
+        </div>
+        <div class="hotel-info">
+          <h1>Hotel Lancaster</h1>
+          <p>5-star hotel</p>
+          <p>Paris, 0.2 miles to Champs Elysées</p>
+          <p><span id="rating">8.8</span> <strong>Excellent</strong> (1736 reviews)</p>
+          <p>Excellent location (9.2 / 10)</p>
+        </div>
+        <div class="deals">
+          <ul>
+            <li>Hotel website <br>$706</li>
+            <li>Agoda <br>$575</li>
+            <li>Travelocity <br>$708</li>
+          </ul>
+          <div class="more-deals">
+            <label for="more-deals">More deals from</label>
+            <select id="more-deals" name="deal">
+              <option value="" selected>$575</option>
+              <option value="1">Deal 1</option>
+              <option value="2">Deal 2</option>
+              <option value="3">Deal 3</option>
+            </select>
+          </div>
+        </div>
+        <aside class="selection">
+          <div class="selection-info">
+            <p><span class="green">Hotel Website</span></p>
+            <p><span class="green cost">$706</span></p>
+            <p>3 nights for <span class="green">$2,119</span></p>
+          </div>
+          <div class="view-deal">
+            <button class="view-deal-btn" type="button" name="view-deal">View Deal</button>
+          </div>
+        </aside>
+      </section>
+
+      <section>
+        <div class="img-container">
+          <p>1/30</p>
+        </div>
+        <div class="hotel-info">
+          <h1>Prince de Galles, a Luxury ...</h1>
+          <p>5-star hotel</p>
+          <p>Paris, 0.3 miles to Champs Elysées</p>
+          <p><span id="rating">9.0</span> <strong>Excellent</strong> (473 reviews)</p>
+          <p>Excellent location (9.4 / 10)</p>
+        </div>
+        <div class="deals">
+          <ul>
+            <li>Orbitz <br>$1,213</li>
+            <li>Trip.com <br>$1,249</li>
+            <li>Expedia <br>$1,213</li>
+          </ul>
+          <div class="more-deals">
+            <label for="more-deals">More deals from</label>
+            <select id="more-deals" name="deal">
+              <option value="" selected>$1,213</option>
+              <option value="1">Deal 1</option>
+              <option value="2">Deal 2</option>
+              <option value="3">Deal 3</option>
+            </select>
+          </div>
+        </div>
+        <aside class="selection">
+          <div class="selection-info">
+            <p><span class="red">HotelPower.com</span></p>
+            <p><span class="red cost">$1,568</span></p>
+            <p><span class="green">Travelocity</span></p>
+            <p><span class="green cost">$1,213</span></p>
+            <p>3 nights for <span class="green">$3,638</span></p>
+            <p><span class="green extra">Free breakfast</span></p>
+          </div>
+          <div class="view-deal">
+            <button class="view-deal-btn" type="button" name="view-deal">View Deal</button>
+          </div>
+        </aside>
+      </section>
+    </main>
+  </body>
+</html>
