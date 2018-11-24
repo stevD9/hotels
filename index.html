@@ -42,7 +42,7 @@
             <input id="price-filter" type="range" name="price" min="10" max="6090">
           </div>
           <div class="property container">
-            <label for="property-type-filter">Property type</label>
+            <label class="property-label" for="property-type-filter">Property type</label>
             <select id="property-type-filter" name="property-type">
               <option value="all" selected>All</option>
               <option value="0">0 Stars</option>
@@ -54,7 +54,7 @@
             </select>
           </div>
           <div class="rating container">
-            <label for="rating-filter">Guest rating</label>
+            <label class="rating-label" for="rating-filter">Guest rating</label>
             <select id="rating-filter" name="rating">
               <option value="all" selected>All</option>
               <option value="okay">0-2 Okay</option>
@@ -65,7 +65,7 @@
             </select>
           </div>
           <div class="location container">
-            <label for="location-filter">Hotel location</label>
+            <label class="location-label" for="location-filter">Hotel location</label>
             <select id="location-filter" name="location">
               <option value="1" selected>Location 1</option>
               <option value="2">Location 2</option>
@@ -75,7 +75,7 @@
             </select>
           </div>
           <div class="more container">
-            <label for="more-filter">More filters</label>
+            <label class="more-label" for="more-filter">More filters</label>
             <select id="more-filter" name="more">
               <option value="" selected>Select</option>
               <option value="breakfast">Breakfast</option>
@@ -94,11 +94,11 @@
 <!-- Sort and map section -->
 
       <section id="map-sort" class="container">
-        <div class="map">
+        <div class="map container">
           <button type="button" name="view-map" class="view-map-btn">View Map</button>
         </div>
         <div class="sort container">
-          <label for="sort-by">Sort by</label>
+          <label class="sort-label" for="sort-by"><strong>Sort by</strong></label>
           <select id="sort-by" name="sort-by">
             <option value="ours">Our recommendations</option>
             <option value="price">Price</option>
