@@ -23,7 +23,7 @@ p {
 }
 
 li {
-  font-size: .9em;
+  font-size: .8em;
   color: grey;
   font-family: 'Merriweather', serif;
 }
@@ -195,6 +195,31 @@ main {
 
 /* Hotels */
 
+.deals {
+  flex: 1 1;
+}
+
+.selection, .img {
+  flex: 2 1;
+}
+
+.hotel-info {
+  flex: 3 1;
+}
+
+.img {
+  align-items: flex-end;
+}
+
+.img p {
+  background-color: darkgrey;
+  color: white;
+  font-size: .8em;
+  margin-left: .5em;
+  margin-bottom: .5em;
+  padding: .3em .2em;
+}
+
 .hotel {
   height: 210px;
   margin-bottom: .5em;
@@ -215,6 +240,15 @@ main {
   border-right: 1px lightgrey solid;
 }
 
+.hotel-info p {
+  padding-bottom: 1em;
+}
+
+#rating {
+  background-color: green;
+  color: white;
+}
+
 .deals ul {
   padding: 0;
   list-style-type: none;
@@ -232,13 +266,14 @@ main {
   flex-direction: column;
   margin-top: .5em;
   text-align: center;
+  font-size: .8em;
   font-family: 'Merriweather', serif;
 }
 
 #more-deals {
   border: none;
   text-align: center;
-  font-size: .8em;
+  font-size: 1em;
   font-family: 'Merriweather', serif;
 }
 
@@ -254,6 +289,32 @@ main {
   justify-content: center;
 }
 
+.selection-info p {
+  font-size: .8em;
+}
+
+p.cost {
+  font-size: 1.2em;
+}
+
+.green {
+  color: green;
+}
+
+.red {
+  color: red;
+}
+
+.red.cost {
+  text-decoration: line-through;
+  padding-bottom: .3em;
+}
+
+.green.extra {
+  border: 1px green solid;
+  margin-top: .6em;
+}
+
 .view-deal-btn {
   width: 100%;
   padding: .75em 0;
@@ -261,16 +322,4 @@ main {
   background-color: green;
   font-size: 1em;
   font-family: 'Merriweather', serif;
-}
-
-.deals {
-  flex: 1 1;
-}
-
-.selection, .img-container {
-  flex: 2 1;
-}
-
-.hotel-info {
-  flex: 3 1;
 }
