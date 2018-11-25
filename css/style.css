@@ -14,18 +14,18 @@ body, p, h1 {
 
 h1 {
   font-size: 1.5em;
-  font-family: sans-serif;
+  font-family: 'Roboto', sans-serif;
 }
 
 p {
   font-size: 1em;
-  font-family: cursive;
+  font-family: 'Merriweather', serif;
 }
 
 li {
   font-size: .9em;
   color: grey;
-  font-family: cursive;
+  font-family: 'Merriweather', serif;
 }
 
 .container {
@@ -38,11 +38,11 @@ header {
   padding: 1em;
   background-color: lightblue;
   color: grey;
-  font-family: cursive;
+  font-family: 'Merriweather', serif;;
 }
 
 header input, header select {
-  font-family: cursive;
+  font-family: 'Merriweather', serif;
 }
 
 #search {
@@ -177,11 +177,12 @@ main {
 .view-map-btn {
   font-size: 1em;
   padding: .5em .5em;
+  font-family: 'Merriweather', serif;
 }
 
 .sort-label {
   font-size: 1em;
-  font-family: cursive;
+  font-family: 'Merriweather', serif;
 }
 
 #sort-by {
@@ -189,6 +190,7 @@ main {
   border: none;
   margin-left: .5em;
   font-size: .8em;
+  font-family: 'Merriweather', serif;
 }
 
 /* Hotels */
@@ -230,14 +232,14 @@ main {
   flex-direction: column;
   margin-top: .5em;
   text-align: center;
-  font-family: sans-serif;
+  font-family: 'Merriweather', serif;
 }
 
 #more-deals {
   border: none;
   text-align: center;
   font-size: .8em;
-  font-family: fantasy;
+  font-family: 'Merriweather', serif;
 }
 
 .selection {
@@ -258,7 +260,7 @@ main {
   color: white;
   background-color: green;
   font-size: 1em;
-  font-family: cursive;
+  font-family: 'Merriweather', serif;
 }
 
 .deals {
