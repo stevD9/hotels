@@ -45,7 +45,7 @@ header input, header select {
   font-family: 'Merriweather', serif;
 }
 
-#search {
+#search, #filters-1 {
   margin-bottom: .5em;
 }
 
@@ -71,13 +71,10 @@ header input, header select {
   flex: 1 1;
 }
 
-#filters-1 {
-  margin-bottom: .5em;
-}
-
 #check-in, #check-out {
-  padding-left: 2em;
+  padding-left: 1.5em;
   border: none;
+  font-size: .9em;
 }
 
 .check-in {
@@ -172,6 +169,8 @@ main {
   height: 60px;
   justify-content: center;
   align-items: center;
+  background-image: url("../images/map.png");
+  background-size: cover;
 }
 
 .view-map-btn {
@@ -218,6 +217,18 @@ main {
   margin-left: .5em;
   margin-bottom: .5em;
   padding: .3em .2em;
+}
+
+.hotel.a .img {
+  background-image: url("../images/hotel1.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+.hotel.b .img {
+  background-image: url("../images/hotel2.jpg");
+  background-size: cover;
+  background-position: center;
 }
 
 .hotel {
