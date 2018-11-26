@@ -34,6 +34,14 @@ select:hover {
   cursor: pointer;
 }
 
+/* Below rule to overcome the fact that Chrome
+shows the list of options white against white
+bsckground */
+
+select option {
+  color: #232323; 
+}
+
 li:hover {
   cursor: pointer;
   text-decoration: underline;
@@ -321,6 +329,12 @@ main {
 
 #more-deals {
   border: none;
+
+  /* Στον chrome δεν μου το πιανει το text-align,
+  ενω στον Mozilla ναι. Προσπαθησα να βαλω και
+  text-align στα options αλλα τιποτα. Στα tools στον
+  Chrome δειχνει το default text-align overriden παντως */
+
   text-align: center;
   font-size: 1em;
   font-family: 'Merriweather', serif;
