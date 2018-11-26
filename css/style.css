@@ -358,7 +358,7 @@ main {
   padding-bottom: 1em;
 }
 
-#rating {
+.rate {
   background-color: #428500;
   color: #fff;
 }
@@ -385,7 +385,7 @@ main {
   color: #232323;
 }
 
-#more-deals {
+#more-deals-1, #more-deals-2 {
   border: none;
 
   /* Στον chrome δεν μου το πιανει το text-align,
