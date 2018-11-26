@@ -115,7 +115,7 @@ header input, header select {
 }
 
 #check-in, #check-out {
-  padding-left: 1.5em;
+  padding-left: 4.3em;
   border: none;
   font-size: .9em;
 }
@@ -124,6 +124,15 @@ header input, header select {
   background-color: #fff;
   border-left: 10px #007fad solid;
   padding-top: .5em;
+  position: relative;
+}
+
+.check-in img {
+  width: 24px;
+  height: 24px;
+  position: absolute;
+  top: .8em;
+  left: 1em;
 }
 
 .check-out {
@@ -131,15 +140,30 @@ header input, header select {
   background-color: #fff;
   border-left: 10px #f48f00 solid;
   padding-top: .5em;
+  position: relative;
+}
+
+.check-out img {
+  width: 24px;
+  height: 24px;
+  position: absolute;
+  top: .8em;
+  left: 1em;
 }
 
 .check-in label, .check-out label {
-  padding-left: 1.5em;
+  padding-left: 4em;
   color: #37454d;
 }
 
 #room-type-filter {
   margin-left: .5em;
+
+  /* Στον chrome δεν μου το πιανει το text-align,
+  ενω στον Mozilla ναι. Προσπαθησα να βαλω και
+  text-align στα options αλλα τιποτα. Στα tools στον
+  Chrome δειχνει το default text-align overriden παντως */
+
   text-align: center;
   border: none;
   font-size: .8em;
@@ -270,6 +294,11 @@ main {
 
 .hotel-info {
   flex: 3 1;
+}
+
+.hotel-info img {
+  height: 1em;
+  width: 4em;
 }
 
 .img {
