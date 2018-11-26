@@ -30,6 +30,15 @@ li {
   font-family: 'Merriweather', serif;
 }
 
+select:hover {
+  cursor: pointer;
+}
+
+li:hover {
+  cursor: pointer;
+  text-decoration: underline;
+}
+
 .container {
   display: flex;
 }
@@ -47,12 +56,18 @@ header input, header select {
   font-family: 'Merriweather', serif;
 }
 
+.check-in:hover, .check-out:hover, .check-in label:hover,
+#check-in, .check-out label:hover,
+#check-out:hover {
+  cursor: pointer;
+}
+
 #search, #filters-1 {
   margin-bottom: .5em;
 }
 
 #search-filter {
-  padding: .3em 0;
+  padding: .3em 1em;
   font-size: 1.5em;
 }
 
@@ -62,6 +77,11 @@ header input, header select {
   padding: 0 5em;
   font-size: .9em;
   border: none;
+}
+
+.search-btn:hover {
+  cursor: pointer;
+  background-color: #005e80;
 }
 
 .check-in, .check-out, .price, .property, .rating,
@@ -121,6 +141,10 @@ header input, header select {
 #price-filter {
   width: 98%;
   margin: 0;
+}
+
+#price-filter:hover {
+  cursor: pointer;
 }
 
 .max-price {
@@ -184,6 +208,12 @@ main {
   background-color: #fff;
   color: #37454d;
   border: 1px #37454d solid;
+}
+
+.view-map-btn:hover {
+  cursor: pointer;
+  color: #fff;
+  background-color: #707070;
 }
 
 .sort-label {
@@ -300,6 +330,11 @@ main {
 .selection {
   flex-direction: column;
   border-left: 1px #707070 solid;
+}
+
+.view-deal-btn:hover {
+  background-color: #2c5700;
+  cursor: pointer;
 }
 
 .selection-info {
