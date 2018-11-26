@@ -21,11 +21,12 @@ h1 {
 p {
   font-size: 1em;
   font-family: 'Merriweather', serif;
+  color: #37454d;
 }
 
 li {
   font-size: .8em;
-  color: grey;
+  color: #707070;
   font-family: 'Merriweather', serif;
 }
 
@@ -180,11 +181,15 @@ main {
   font-size: 1em;
   padding: .5em .5em;
   font-family: 'Merriweather', serif;
+  background-color: #fff;
+  color: #37454d;
+  border: 1px #37454d solid;
 }
 
 .sort-label {
   font-size: 1em;
   font-family: 'Merriweather', serif;
+  color: #37454d;
 }
 
 #sort-by {
@@ -214,8 +219,8 @@ main {
 }
 
 .img p {
-  background-color: darkgrey;
-  color: white;
+  background-color: #707070;
+  color: #fff;
   font-size: .8em;
   margin-left: .5em;
   margin-bottom: .5em;
@@ -237,7 +242,7 @@ main {
 .hotel {
   height: 210px;
   margin-bottom: .5em;
-  background-color: white;
+  background-color: #fff;
 }
 
 .hotel-info, .deals, .selection {
@@ -251,7 +256,7 @@ main {
 }
 
 .hotel-info {
-  border-right: 1px lightgrey solid;
+  border-right: 1px #707070 solid;
 }
 
 .hotel-info p {
@@ -259,8 +264,8 @@ main {
 }
 
 #rating {
-  background-color: green;
-  color: white;
+  background-color: #428500;
+  color: #fff;
 }
 
 .deals ul {
@@ -273,7 +278,7 @@ main {
   justify-content: space-around;
   height: 100%;
   padding-bottom: .5em;
-  border-bottom: 1px lightgrey solid;
+  border-bottom: 1px #707070 solid;
 }
 
 .more-deals {
@@ -282,6 +287,7 @@ main {
   text-align: center;
   font-size: .8em;
   font-family: 'Merriweather', serif;
+  color: #232323;
 }
 
 #more-deals {
@@ -293,7 +299,7 @@ main {
 
 .selection {
   flex-direction: column;
-  border-left: 1px lightgrey solid;
+  border-left: 1px #707070 solid;
 }
 
 .selection-info {
@@ -312,11 +318,11 @@ p.cost {
 }
 
 .green {
-  color: green;
+  color: #428500;
 }
 
 .red {
-  color: red;
+  color: #c94a30;
 }
 
 .red.cost {
@@ -325,15 +331,15 @@ p.cost {
 }
 
 .green.extra {
-  border: 1px green solid;
+  border: 1px #428500 solid;
   margin-top: .6em;
 }
 
 .view-deal-btn {
   width: 100%;
   padding: .75em 0;
-  color: white;
-  background-color: green;
+  color: #fff;
+  background-color: #428500;
   font-size: 1em;
   font-family: 'Merriweather', serif;
   border: none;
