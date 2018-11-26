@@ -270,7 +270,6 @@ main {
 }
 
 .hotel {
-  height: 210px;
   margin-bottom: .5em;
   background-color: #fff;
 }
@@ -367,7 +366,7 @@ p.cost {
 
 .green.extra {
   border: 1px #428500 solid;
-  margin-top: .6em;
+  margin: .6em;
 }
 
 .view-deal-btn {
