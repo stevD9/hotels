@@ -59,6 +59,7 @@ header input, header select {
   background-color: blue;
   padding: 0 5em;
   font-size: .9em;
+  border: none;
 }
 
 .check-in, .check-out, .price, .property, .rating,
@@ -333,4 +334,5 @@ p.cost {
   background-color: green;
   font-size: 1em;
   font-family: 'Merriweather', serif;
+  border: none;
 }
