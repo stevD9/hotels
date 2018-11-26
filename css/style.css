@@ -15,6 +15,7 @@ body, p, h1 {
 h1 {
   font-size: 1.5em;
   font-family: 'Roboto', sans-serif;
+  color: #37454d;
 }
 
 p {
@@ -35,9 +36,9 @@ li {
 /* Header */
 
 header {
-  padding: 1em;
-  background-color: lightblue;
-  color: grey;
+  padding: 1em 5em;;
+  background-color: #37454d;
+  color: #cdd0be;
   font-family: 'Merriweather', serif;;
 }
 
@@ -55,8 +56,8 @@ header input, header select {
 }
 
 .search-btn {
-  color: white;
-  background-color: blue;
+  color: #fff;
+  background-color: #007fad;
   padding: 0 5em;
   font-size: .9em;
   border: none;
@@ -79,20 +80,21 @@ header input, header select {
 }
 
 .check-in {
-  background-color: white;
-  border-left: 10px blue solid;
+  background-color: #fff;
+  border-left: 10px #007fad solid;
   padding-top: .5em;
 }
 
 .check-out {
   margin-left: .5em;
-  background-color: white;
-  border-left: 10px orange solid;
+  background-color: #fff;
+  border-left: 10px #f48f00 solid;
   padding-top: .5em;
 }
 
 .check-in label, .check-out label {
   padding-left: 1.5em;
+  color: #37454d;
 }
 
 #room-type-filter {
@@ -107,7 +109,7 @@ header input, header select {
 }
 
 .property, .rating, .location, .more {
-  border-left: 1px black solid;
+  border-left: 1px #cdd0be solid;
 }
 
 .price {
@@ -144,14 +146,14 @@ header input, header select {
   border: none;
   background-color: transparent;
   font-size: .8em;
-  color: white;
+  color:#fff;
 }
 
 /* Main */
 
 main {
-  padding: .5em 1em;;
-  background-color: lightgrey;
+  padding: .5em 5em;;
+  background-color: #ebeced;
 }
 
 /* Sort and map */
