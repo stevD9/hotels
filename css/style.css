@@ -25,12 +25,6 @@ p {
   color: #37454d;
 }
 
-li {
-  font-size: .8em;
-  color: #707070;
-  font-family: 'Merriweather', serif;
-}
-
 select {
   -webkit-appearance: none;
   appearance: none;
@@ -46,11 +40,6 @@ background */
 
 select option {
   color: #232323;
-}
-
-li:hover {
-  cursor: pointer;
-  text-decoration: underline;
 }
 
 .container {
@@ -387,6 +376,19 @@ main {
   height: 100%;
   padding-bottom: .5em;
   border-bottom: 1px #707070 solid;
+}
+
+.deals li {
+  font-size: .8em;
+  color: #707070;
+  font-family: 'Merriweather', serif;
+  padding: 1em 0;
+}
+
+.deals li:hover {
+  cursor: pointer;
+  background-color: #c2eefc;
+  color: #1e81a1;
 }
 
 .more-deals {
