@@ -475,7 +475,11 @@ p.cost {
   border: none;
 }
 
-.view-deal-btn:hover {
-  background-color: #2c5700;
+.view-deal:hover .view-deal-btn {
+  background-color: #376a02;
   cursor: pointer;
+}
+
+.view-deal:hover img {
+  right: .8em;
 }
