@@ -19,7 +19,6 @@ window.addEventListener("load", function(){
   // CLick function to show the details of the clicked deal element on the right (aside) preview of the page
 
     $deals.click(function(e){
-      console.log("CLICKED");
 
       let $hotel = $(e.currentTarget).children(".hotel-site");
 
