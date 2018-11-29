@@ -308,14 +308,14 @@ main {
   justify-content: space-between;
 }
 
-.img img {
+.img > img {
   height: 1em;
   width: 1em;
   margin-left: .5em;
   margin-top: .5em;
 }
 
-.img p {
+.img > p {
   background-color: #707070;
   color: #fff;
   font-size: .8em;
@@ -325,13 +325,13 @@ main {
   width: 2.5em;
 }
 
-.hotel.a .img {
+.hotel.a > .img {
   background-image: url("../images/hotel1.jpg");
   background-size: cover;
   background-position: center;
 }
 
-.hotel.b .img {
+.hotel.b > .img {
   background-image: url("../images/hotel2.jpg");
   background-size: cover;
   background-position: center;
@@ -356,7 +356,7 @@ main {
   border-right: 1px #707070 solid;
 }
 
-.hotel-info p {
+.hotel-info > p {
   padding-bottom: 1.3em;
 }
 
@@ -365,7 +365,7 @@ main {
   color: #fff;
 }
 
-.deals ul {
+.deals > ul {
   padding: 0;
   list-style-type: none;
   text-align: center;
@@ -378,9 +378,12 @@ main {
   border-bottom: 1px #707070 solid;
 }
 
+.deals li > p {
+  color: #707070;
+}
+
 .deals li {
   font-size: .8em;
-  color: #707070;
   font-family: 'Merriweather', serif;
   padding: 1em 0;
 }
@@ -388,6 +391,9 @@ main {
 .deals li:hover {
   cursor: pointer;
   background-color: #c2eefc;
+}
+
+.deals li:hover p {
   color: #1e81a1;
 }
 
@@ -431,11 +437,11 @@ main {
   justify-content: center;
 }
 
-.selection-info p {
+.selection-info > p {
   font-size: .8em;
 }
 
-p.cost {
+.selection-info > p.cost, .selection-info > p.cost-red {
   font-size: 1.2em;
   padding: .6em 0;
 }
@@ -448,7 +454,7 @@ p.cost {
   color: #c94a30;
 }
 
-.red.cost {
+.red.cost-red {
   text-decoration: line-through;
 }
 
@@ -461,7 +467,7 @@ p.cost {
   position: relative;
 }
 
-.view-deal img {
+.view-deal > img {
   position: absolute;
   top: .9em;
   right: 1em;
