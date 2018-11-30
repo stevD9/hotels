@@ -74,6 +74,10 @@ header input, header select {
   font-size: 1.5em;
 }
 
+#search-filter:focus {
+  box-shadow: 0 4px 10px #007fad, 0 -4px 10px #007fad;
+}
+
 #search {
   position: relative;
 }
@@ -315,6 +319,10 @@ main {
   margin-top: .5em;
 }
 
+.img > img:hover {
+  cursor: pointer;
+}
+
 .img > p {
   background-color: #707070;
   color: #fff;
@@ -489,5 +497,5 @@ main {
 }
 
 .view-deal:hover img {
-  right: .8em;
+  right: .7em;
 }
