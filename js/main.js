@@ -1,5 +1,14 @@
 window.addEventListener("load", function(){
 
+  // ms in a day
+
+  const msInDay = 86400000;
+
+  // set variables for checkin and checkout inputs
+
+  const checkIn = document.getElementById("check-in");
+  const checkOut = document.getElementById("check-out");
+
   // Set the variables for the range input
 
   let rangeElement = document.getElementById("price-filter");
@@ -31,6 +40,23 @@ window.addEventListener("load", function(){
     $($hotelPreview).html($($hotel).html());
     $($pricePreview).html($($hotelPrice).html());
 
+    //now to show total price of clicked element
+
+    let $totalPrice = $(this).closest(".deals").next(".selection").find(".total-cost");
+
+    let $grabPriceNumber = parseInt($pricePreview.html().split("$")[1]);
+
+    let checkInDate = new Date(checkIn.value);
+    let checkOutDate = new Date(checkOut.value);
+
+    let totalDays = (checkOutDate-checkInDate)/msInDay;
+
+    if((totalDays === 1 || checkIn.value === "" ||
+      checkOut.value === "")) {
+        $totalPrice.html(`1 night for <span class="green">$${$grabPriceNumber}</span>`);
+      } else {
+        $totalPrice.html(`${totalDays} nights for <span class="green">$${$grabPriceNumber*totalDays}</span>`);
+      }
   });
 
   // Set variables for the the favourite image
@@ -60,11 +86,6 @@ window.addEventListener("load", function(){
     return d;
   }
 
-  // set variables for checkin and checkout inputs
-
-  const checkIn = document.getElementById("check-in");
-  const checkOut = document.getElementById("check-out");
-
   // set the dafualt value and min of checkin
   // to today and plus one for checkout
 
@@ -77,15 +98,15 @@ window.addEventListener("load", function(){
   checkIn.value = todayToString;
   checkIn.min = todayToString;
 
-  let checkoutDate = new Date(today);
-  checkoutDate.setDate(checkoutDate.getDate()+1);
-  let checkoutYYYY = checkoutDate.getFullYear();
-  let checkoutMM = formatDate(checkoutDate.getMonth()+1);
-  let checkoutDD = formatDate(checkoutDate.getDate());
-  let checkoutToString = `${checkoutYYYY}-${checkoutMM}-${checkoutDD}`;
+  let tomorrow = new Date(today);
+  tomorrow.setDate(tomorrow.getDate()+1);
+  let tomorrowYYYY = tomorrow.getFullYear();
+  let tomorrowMM = formatDate(tomorrow.getMonth()+1);
+  let tomorrowDD = formatDate(tomorrow.getDate());
+  let tomorrowToString = `${tomorrowYYYY}-${tomorrowMM}-${tomorrowDD}`;
 
-  checkOut.value = checkoutToString;
-  checkOut.min = checkoutToString;
+  checkOut.value = tomorrowToString;
+  checkOut.min = tomorrowToString;
 
   // adapt checkout min and value to
   // checkin date
@@ -99,19 +120,26 @@ window.addEventListener("load", function(){
     let dateToString = `${yyyy}-${mm}-${dd}`;
     checkOut.min = dateToString;
     if (checkIn.value === "") {
-      checkOut.min = checkoutToString;
+      checkOut.min = tomorrowToString;
     }
   });
 
-  // let $costInit = $(".selection-info > .cost");
-  //
-  // for (let i of $costInit) {
-  //   console.log(i);
-  //   i.html().split("$")[1];
-  // }
-  //
-  //
-  // const msInDay = 86400000;
+  // set defualt onload total price of deals
+
+  const $dealPrices = $(".selection-info > .cost").text().split("$");
+
+  const $totalPriceElement = $(".selection-info > .total-cost");
+
+  let defaultTotalDays = (tomorrow - today)/msInDay;
+
+  for (let i = 0; i<$totalPriceElement.length; i++) {
+    $totalPriceElement.html(function(i){
+      let defaultTotalPrice = (parseInt($dealPrices[i+1])*defaultTotalDays);
+      return `${defaultTotalDays} night for <span class="green">$${defaultTotalPrice}</span>`;
+    });
+  };
+
+
   // const dateInputs = document.querySelectorAll("input[type = date]");
   //
   // for (let dateInput of dateInputs) {
