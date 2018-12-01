@@ -77,15 +77,15 @@ window.addEventListener("load", function(){
   checkIn.value = todayToString;
   checkIn.min = todayToString;
 
-  let dateVariable = new Date(checkIn.value);
-  dateVariable.setDate(dateVariable.getDate()+1);
-  let yyyy = dateVariable.getFullYear();
-  let mm = formatDate(dateVariable.getMonth()+1);
-  let dd = formatDate(dateVariable.getDate());
-  let dateToString = `${yyyy}-${mm}-${dd}`;
+  let checkoutDate = new Date(today);
+  checkoutDate.setDate(checkoutDate.getDate()+1);
+  let checkoutYYYY = checkoutDate.getFullYear();
+  let checkoutMM = formatDate(checkoutDate.getMonth()+1);
+  let checkoutDD = formatDate(checkoutDate.getDate());
+  let checkoutToString = `${checkoutYYYY}-${checkoutMM}-${checkoutDD}`;
 
-  checkOut.value = dateToString;
-  checkOut.min = dateToString;
+  checkOut.value = checkoutToString;
+  checkOut.min = checkoutToString;
 
   // adapt checkout min and value to
   // checkin date
@@ -97,9 +97,30 @@ window.addEventListener("load", function(){
     let mm = formatDate(dateVariable.getMonth()+1);
     let dd = formatDate(dateVariable.getDate());
     let dateToString = `${yyyy}-${mm}-${dd}`;
-    checkOut.value = dateToString;
     checkOut.min = dateToString;
+    if (checkIn.value === "") {
+      checkOut.min = checkoutToString;
+    }
   });
 
+  // let $costInit = $(".selection-info > .cost");
+  //
+  // for (let i of $costInit) {
+  //   console.log(i);
+  //   i.html().split("$")[1];
+  // }
+  //
+  //
+  // const msInDay = 86400000;
+  // const dateInputs = document.querySelectorAll("input[type = date]");
+  //
+  // for (let dateInput of dateInputs) {
+  //   dateInput.addEventListener("change",function(){
+  //     let checkInDate = new Date(checkIn.value);
+  //     let checkOutDate = new Date(checkOut.value);
+  //     let days = (checkOutDate-checkInDate)/msInDay;
+  //     console.log(days);
+  //   });
+  // }
 
 });
