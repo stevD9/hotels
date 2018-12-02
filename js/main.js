@@ -52,7 +52,7 @@ window.addEventListener("load", function(){
     let totalDays = (checkOutDate-checkInDate)/msInDay;
 
     if((totalDays === 1 || checkIn.value === "" ||
-      checkOut.value === "")) {
+      checkOut.value === "" || totalDays < 0)) {
         $totalPrice.html(`1 night for <span class="green">$${$grabPriceNumber}</span>`);
       } else {
         $totalPrice.html(`${totalDays} nights for <span class="green">$${$grabPriceNumber*totalDays}</span>`);
@@ -126,7 +126,9 @@ window.addEventListener("load", function(){
 
   // set defualt onload total price of deals
 
-  const $dealPrices = $(".selection-info > .cost").text().split("$");
+  let $dealPrices = $(".selection-info > .cost");
+
+  const $grabInitialPrice = $dealPrices.text().split("$");
 
   const $totalPriceElement = $(".selection-info > .total-cost");
 
@@ -134,21 +136,29 @@ window.addEventListener("load", function(){
 
   for (let i = 0; i<$totalPriceElement.length; i++) {
     $totalPriceElement.html(function(i){
-      let defaultTotalPrice = (parseInt($dealPrices[i+1])*defaultTotalDays);
+      let defaultTotalPrice = (parseInt($grabInitialPrice[i+1])*defaultTotalDays);
       return `${defaultTotalDays} night for <span class="green">$${defaultTotalPrice}</span>`;
     });
-  };
+  }
 
+  // set total price when date inputs change
 
-  // const dateInputs = document.querySelectorAll("input[type = date]");
-  //
-  // for (let dateInput of dateInputs) {
-  //   dateInput.addEventListener("change",function(){
-  //     let checkInDate = new Date(checkIn.value);
-  //     let checkOutDate = new Date(checkOut.value);
-  //     let days = (checkOutDate-checkInDate)/msInDay;
-  //     console.log(days);
-  //   });
-  // }
+  $("input[type='date']").change(function(){
+    let checkInDate = new Date(checkIn.value);
+    let checkOutDate = new Date(checkOut.value);
+    let totalDays = (checkOutDate - checkInDate)/msInDay;
+    for (let i = 0; i < $totalPriceElement.length; i++){
+      $totalPriceElement.html(function(i){
+        let $grabPrice = $dealPrices.text().split("$");
+        let totalPrice = (parseInt($grabPrice[i+1])*totalDays);
+        if ((totalDays === 1 || checkIn.value === "" ||
+            checkOut.value === "" || totalDays < 0)){
+              return `1 night for <span class="green">$${$grabPrice[i+1]}</span>`
+            } else {
+              return `${totalDays} nights for <span class="green">$${totalPrice}</span>`
+            }
+      });
+    }
+  });
 
 });
