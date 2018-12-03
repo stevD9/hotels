@@ -263,6 +263,13 @@ main {
   background-color: #707070;
 }
 
+/* Overide bootstrap modal width
+to fit the google image */
+
+#map-sort .modal-dialog {
+  max-width: 1195px;
+}
+
 .sort-label {
   font-size: 1em;
   font-family: 'Merriweather', serif;
