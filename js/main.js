@@ -121,6 +121,8 @@ window.addEventListener("load", function(){
     checkOut.min = dateToString;
     if (checkIn.value === "") {
       checkOut.min = tomorrowToString;
+    } else if (checkIn.value >= checkOut.value) {
+      checkOut.value = dateToString;
     }
   });
 
