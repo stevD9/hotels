@@ -154,7 +154,7 @@ window.addEventListener("load", function(){
         let $grabPrice = $dealPrices.text().split("$");
         let totalPrice = (parseInt($grabPrice[i+1])*totalDays);
         if ((totalDays === 1 || checkIn.value === "" ||
-            checkOut.value === "" || totalDays < 0)){
+            checkOut.value === "")){
               return `1 night for <span class="green">$${$grabPrice[i+1]}</span>`
             } else {
               return `${totalDays} nights for <span class="green">$${totalPrice}</span>`
