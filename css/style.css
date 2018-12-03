@@ -42,7 +42,7 @@ select option {
   color: #232323;
 }
 
-.container {
+.flex-container {
   display: flex;
 }
 
@@ -244,7 +244,7 @@ main {
   height: 60px;
   justify-content: center;
   align-items: center;
-  background-image: url("../images/map.png");
+  background-image: url("../images/champs-elysees.png");
   background-size: cover;
 }
 
@@ -307,42 +307,20 @@ main {
   width: 4em;
 }
 
-.img {
-  flex-direction: column;
-  justify-content: space-between;
+.carousel-item > .img-fluid {
+  position: relative;
 }
 
-.img > img {
+.carousel-item > #favourite {
   height: 1em;
   width: 1em;
-  margin-left: .5em;
-  margin-top: .5em;
+  left: 5em;
+  top: 1em;
+  position: absolute;
 }
 
-.img > img:hover {
+.carousel-item > #favourite:hover {
   cursor: pointer;
-}
-
-.img > p {
-  background-color: #707070;
-  color: #fff;
-  font-size: .8em;
-  margin-left: .5em;
-  margin-bottom: .5em;
-  padding: .3em .2em;
-  width: 2.5em;
-}
-
-.hotel.a > .img {
-  background-image: url("../images/hotel1.jpg");
-  background-size: cover;
-  background-position: center;
-}
-
-.hotel.b > .img {
-  background-image: url("../images/hotel2.jpg");
-  background-size: cover;
-  background-position: center;
 }
 
 .hotel {
@@ -365,7 +343,7 @@ main {
 }
 
 .hotel-info > p {
-  padding-bottom: 1.3em;
+  padding-bottom: 1.6em;
 }
 
 .rate {
@@ -393,7 +371,7 @@ main {
 .deals li {
   font-size: .8em;
   font-family: 'Merriweather', serif;
-  padding: 1em 0;
+  padding: 1.2em 0;
 }
 
 .deals li:hover {

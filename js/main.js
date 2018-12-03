@@ -15,15 +15,21 @@ window.addEventListener("load", function(){
   let maxPrice = document.getElementById("max");
   maxPrice.innerHTML = rangeElement.value;
 
+  // Set variables for the the favourite image
+
+  const $favouriteImg = $(".carousel-item > #favourite");
+  const heartCheckedPath = "./images/favorite-checked.png"
+  const heartUnCheckedPath = "./images/favorite.png";
+
+  // Set variable for the list with the deals object
+
+  const $deals = $("#hotels .deals li");
+
   // Set the max price on the price label
 
   rangeElement.addEventListener("input",function(){
     maxPrice.innerHTML = rangeElement.value;
   });
-
-  // Set variable for the list with the deals object
-
-  const $deals = $("#hotels .deals li");
 
   // CLick function to show the details of the clicked deal element on the right (aside) preview of the page
 
@@ -52,18 +58,12 @@ window.addEventListener("load", function(){
     let totalDays = (checkOutDate-checkInDate)/msInDay;
 
     if((totalDays === 1 || checkIn.value === "" ||
-      checkOut.value === "" || totalDays < 0)) {
+      checkOut.value === "")) {
         $totalPrice.html(`1 night for <span class="green">$${$grabPriceNumber}</span>`);
       } else {
         $totalPrice.html(`${totalDays} nights for <span class="green">$${$grabPriceNumber*totalDays}</span>`);
       }
   });
-
-  // Set variables for the the favourite image
-
-  const $favouriteImg = $(".img > img");
-  const heartCheckedPath = "./images/favorite-checked.png"
-  const heartUnCheckedPath = "./images/favorite.png";
 
 // Function to change the color of the favourite image
 // when clicked
